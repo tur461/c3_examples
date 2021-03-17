@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C3</title>\
+    <link rel="stylesheet" href="./c3.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <select id="dropdown--graph-selector">
+            <option value="0" selected>Donut</option>
+            <option value="1">Line</option>
+            <option value="2">Horizontal Bar</option>
+            <option value="3">Stacked Bar</option>
+        </select>
+
+        <div id="section--chart-area"></div>
+    </div>
+
+
+    <script src="./d3.v5.min.js"></script>
+    <script src="./c3.min.js"></script>
+    <script src="./donut.js"></script>
+    <script src="./line.js"></script>
+    <script src="./bar_vertical.js"></script>
+    <script src="./bar_horizontal.js"></script>
+    <script src="./bar_stacked.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
