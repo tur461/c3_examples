@@ -3,15 +3,20 @@
     let graph = {
         DONUT: 0,
         LINE: 1,
-        HZBAR: 2,
-        STACKBAR: 3,
+        HBAR: 2,
+        VBAR: 3,
+        STACKBAR: 4,
         drawDonut: drawDonut,
         drawLine: drawLine,
+        drawVBar: drawVBar,
+        drawHBar: drawHBar,
+        drawStackedBar: drawStackedBar,
     };
+    let targetTag = '#section--chart-area';
 
     let selectedGraph = graph.DONUT;
 
-    graph.drawDonut('#section--chart-area');
+    graph.drawDonut(targetTag);
     
     graphSelector.onchange = function(e){
         e.preventDefault();
@@ -20,15 +25,23 @@
         switch(selectedGraph){
             case graph.DONUT:
                 console.log('drawing donut graph');
-                graph.drawDonut('#section--chart-area');
+                graph.drawDonut(targetTag);
                 break;
             case graph.LINE:
                 console.log('drawing line graph');
-                graph.drawLine('#section--chart-area');
+                graph.drawLine(targetTag);
                 break;
-            case graph.HZBAR:
+            case graph.HBAR:
+                console.log('drawing horizontal bar graph');
+                graph.drawHBar(targetTag);
+                break;
+            case graph.VBAR:
+                console.log('drawing vertical bar graph');
+                graph.drawVBar(targetTag);
                 break;
             case graph.STACKBAR:
+                console.log('drawing stacked bar graph');
+                graph.drawStackedBar(targetTag);
                 break;
         }
     }

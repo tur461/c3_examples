@@ -1,4 +1,4 @@
-function drawHbar(targetHtmlElementTag, data){
+function drawHBar(targetHtmlElementTag, data){
     let chart = c3.generate({
         bindto: targetHtmlElementTag,
         data: {
@@ -11,7 +11,7 @@ function drawHbar(targetHtmlElementTag, data){
             }
         },
         axis: {
-            rotated: false
+            rotated: true
         }
     });
     return chart;
